@@ -64,7 +64,7 @@ body {
 
 .ContentImageArrow {
   display: grid;
-  grid-template-columns: 8.6rem 1fr 8.6rem;
+  grid-template-columns: 13.6rem 1fr 13.6rem;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -73,11 +73,22 @@ body {
   height: 100dvh;
   align-items: center;
 }
+@media (max-width: 767px) {
+  .ContentImageArrow {
+    grid-template-columns: 1fr 0 1fr;
+    align-items: flex-end;
+  }
+}
 .ContentImageArrow .arrowLeft {
   grid-area: arrowLeft;
   z-index: 3;
   margin-left: auto;
   width: 70px;
+}
+@media (max-width: 767px) {
+  .ContentImageArrow .arrowLeft {
+    padding: 0.8rem;
+  }
 }
 .ContentImageArrow .ContentImages {
   grid-column: 1/-1;
@@ -91,13 +102,18 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
   width: 100%;
   height: 100%;
-  clip-path: polygon(0% 0%, 0% 100%, 10% 100%, 10% 6%, 90% 6%, 90% 95%, 10% 95%, 10% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 16% 100%, 16% 16%, 84% 15%, 84% 85%, 10% 85%, 10% 100%, 100% 100%, 100% 0%);
 }
 .ContentImageArrow .arrowRight {
   grid-area: arrowRight;
   z-index: 3;
   margin-right: auto;
   width: 70px;
+}
+@media (max-width: 767px) {
+  .ContentImageArrow .arrowRight {
+    padding: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
